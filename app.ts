@@ -1,20 +1,21 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  // if (typeof n1 !== 'number' || typeof n2 !== 'number') {
-  //   throw new Error("Incorrect input!");
-  // }
+// const person: {
+//   name: string;
+//   age: number;
+//   hoobies: string[]; -> string array type
+// } = {
+const person = {
+  name: 'Laura',
+  age: 22,
+  hobbies: ['Arts', 'Programming']
+};
 
-  const result = n1 + n2
-  if (showResult) {
-    console.log(phrase + result);
-  } else {
-    return result;
-  }
+// let favoriteActivities: any[]; -> mix array type
+// favoriteActivities = ['apple', 1];
+
+console.log(person.name);
+
+for (const hobby of person.hobbies) {
+  // TS let us use any method on strings bcz hobby is set as string type
+  console.log(hobby.toUpperCase());
+  // console.log(hobby.map()); // !!! ERROR !!!
 }
-
-let number1: number;
-number1 = 5;
-const number2 = 3.5;
-const printResult = true;
-const resultPhrase = 'Result is: '
-
-add(number1, number2, printResult, resultPhrase)
