@@ -1,15 +1,22 @@
-// const person: {
-//   name: string;
-//   age: number;
-//   hoobies: string[]; -> string array type
-// } = {
-const person = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[]; // string array type
+  role: [number, string];
+} = {
   name: 'Laura',
   age: 22,
-  hobbies: ['Arts', 'Programming']
+  hobbies: ['Arts', 'Programming'],
+  role: [2, 'author'] // Tuple type Array with fixed type and length
 };
 
-// let favoriteActivities: any[]; -> mix array type
+// TUPLE
+// person.role.push('admin'); // push exception that is allowed on tuple
+// person.role[1] = 10; // !!! ERROR cannot be number need to be string !!!
+// person.role = [0, 'admin', 'user']; // !!! ERROR length can only be 2 !!!
+
+// ARRAY
+// let favoriteActivities: any[]; // mix array type
 // favoriteActivities = ['apple', 1];
 
 console.log(person.name);
